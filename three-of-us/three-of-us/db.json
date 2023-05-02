@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 {
     "ULTRA-RARE-SUPERCARS": [
+=======
+
+    "ULTRA-RARE SUPERCARS": [
+>>>>>>> refs/remotes/origin/kazungu
       {
         "Id": "1",
         "Make": "MERDCEDES-BENZ",
