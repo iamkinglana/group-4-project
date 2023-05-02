@@ -1,5 +1,21 @@
 
 import './App.css';
+import React from 'react';
+import Card from './Card.js';
+import cars from './db.json';
+
+const App = () => {
+  return (
+    <div className="container">
+      {cars['ULTRA-RARE SUPERCARS'].map((car) => (
+        <Card car={car} key={car.Id} />
+      ))}
+    </div>
+  );
+};
+
+
+
 
 function App() {
   return (
