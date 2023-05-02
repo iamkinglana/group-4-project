@@ -1,20 +1,17 @@
 
 import './App.css';
+import CarCollection from './components/CarList';
+import Navbar from './components/NavBar';
+import SearchCars from './components/SearchCars';
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SearchCars/>
+      <Navbar/>
+      <CarCollection/>
+    
     </div>
   );
 }
