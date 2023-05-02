@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-function CarCollection() {
+function CarList() {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3007/")
+    fetch("http://localhost:3006/cars")
       .then((response) => response.json())
       .then((data) => setCars(data))
       .catch((error) => console.error(error));
@@ -34,15 +34,17 @@ function CarCollection() {
             onClick={() => handleCardClick(cars.id)}
           >
             <div className="card-image">
-              <img src={cars.avatar_url} alt={cars.name} />
+              <img src={cars.Image-1} alt={cars.Make} />
+              <img src={cars.Image-2} alt={cars.Make} />
             </div>
             <div className="card-content">
               <h3>
-                {cars.name} {cars.car_class}
+                {cars.Make} {cars.Model}
               </h3>
-              <p id="catchphrase">{cars.catchphrase}</p>
+              <p id="catchphrase">{cars.Engine}</p>
               <p>
-                {cars.health} {cars.damage} {cars.armor}{" "}
+                {cars.Origin} {cars.top} 
+                {cars.price}
               </p>
             </div>
           </div>
@@ -52,4 +54,4 @@ function CarCollection() {
   );
 }
 
-export default CarCollection;
+export default CarList;
