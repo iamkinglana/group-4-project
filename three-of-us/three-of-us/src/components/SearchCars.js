@@ -14,7 +14,6 @@ function SearchCars({ cars }) {
       cars.category.toLowerCase().includes(query.toLowerCase())
     );
   });
-
   
 
   return (
