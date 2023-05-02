@@ -1,30 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 
-
-function SearchCars({ cars }) {
-  const [query, setQuery] = useState("");
-
-  const handleInputChange = (event) => {
-    setQuery(event.target.value);
-  };
-
-  const filteredcars = cars.filter((cars) => {
-    return (
-      cars.description.toLowerCase().includes(query.toLowerCase()) ||
-      cars.category.toLowerCase().includes(query.toLowerCase())
-    );
-  });
-  
-
-  return (
-    <div>
-      
-      <input type="text" placeholder="Search cars" onChange={handleInputChange} />
-      {/* carlist goes here */}
-      
-  
-    </div>
-  );
+function Search({ handleSearch }) {
+	return (
+		<div className="ui large fluid icon input">
+			<input
+				type="text"
+				placeholder="Search your Cars"
+				onChange={(e) => {
+					console.log("Searching...");
+					handleSearch(e.target.value);
+				}}
+			/>
+			<i className="circular search link icon"></i>
+		</div>
+	);
 }
-
-export default SearchCars;
+export default Search;

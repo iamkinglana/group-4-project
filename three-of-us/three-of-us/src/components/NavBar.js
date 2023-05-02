@@ -1,8 +1,10 @@
 import React from "react";
 
-function NavBar(){
+function Navbar(){
     return(
         <div>
+            <h1>Murabu</h1>
+    
             
         </div>
     )

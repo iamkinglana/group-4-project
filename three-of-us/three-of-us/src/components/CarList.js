@@ -4,7 +4,7 @@ function CarCollection() {
   const [cars, setCars] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/ULTRA-RARE-SUPERCARS")
+    fetch("http://localhost:3007/")
       .then((response) => response.json())
       .then((data) => setCars(data))
       .catch((error) => console.error(error));
