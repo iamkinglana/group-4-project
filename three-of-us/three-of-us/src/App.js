@@ -2,6 +2,8 @@
 import React from "react";
 import CarsContainer from "./components/CarsContainer";
 import CarList from "./components/CarList";
+import Card from "./components/Card";
+import CarSearch from "./components/CarSearch.js";
 
 
 
@@ -48,13 +50,20 @@ function App() {
 			<div className="ui segment violet inverted">
 				<h2>Three-Of-US</h2>
 			</div>
+			
+			
 			<CarsContainer
 				handleAddCars={handleAddCars}
 				cars={cars}
 				handleSearch={handleSearch}
 				handleDeleteCars={handleDeleteCars}
 			/>
+			<CarSearch/>
+			<Card/>
+			
 			<CarList cars={cars}/>
+			
+
 		</div>
 		// <div>ddd</div>
 	);

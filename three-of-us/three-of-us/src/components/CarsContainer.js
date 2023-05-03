@@ -16,10 +16,10 @@ function CarsContainer({
 				handleAddCars={handleAddCars}
 				cars={cars}
 			/>
-			<CarList
+			{/* <CarList
 				cars={cars}
 				handleDeleteCars={handleDeleteCars}
-			/>
+			/> */}
 		</div>
 	);
 }
