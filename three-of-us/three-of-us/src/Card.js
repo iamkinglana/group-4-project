@@ -1,22 +1,22 @@
 import React from 'react';
-import Card from './Card';
-import cars from './db.json';
 
-function CarList() {
+function Card({ make, model, year, price, image }) {
   return (
-    <div className="car-list">
-      {cars.map((car) => (
-        <Card
-          key={car.id}
-          make={car.make}
-          model={car.model}
-          year={car.year}
-          price={car.price}
-          image={car.image}
-        />
-      ))}
+    <div className="card">
+      <div className="card-image">
+        <img src={image} alt={`${make} ${model}`} />
+      </div>
+      <div className="card-content">
+        <div className="card-header">
+          <h3 className="card-title">{`${make} ${model}`}</h3>
+          <div className="card-subtitle">{year}</div>
+        </div>
+        <div className="card-details">
+          <div className="card-price">{`$${price}`}</div>
+        </div>
+      </div>
     </div>
   );
 }
 
-export default CarList;
+export default Card;
