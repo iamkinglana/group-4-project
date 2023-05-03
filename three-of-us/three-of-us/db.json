@@ -1,5 +1,7 @@
 {
+
   "cars": [
+
     {
       "Id": "1",
       "Make": "MERDCEDES-BENZ",
@@ -82,7 +84,7 @@
     },
     {
       "Id": "6",
-      "Make": "KOENIGSESS",
+      "Make": "KOENIGSEGG",
       "Model": "CCXR TREVITA",
       "Debuted": "2006",
       "Engine": " twin rotrex supercharged 4.8L V8 engine",
@@ -271,19 +273,8 @@
       "Units Produced": "3",
       "Image 1": "https://wallpaperaccess.com/full/8773696.jpg",
       "Image 2": "https://www.motortrend.com/uploads/sites/5/2021/05/P90423781_highRes_rolls-royce-boat-tai.jpg"
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
 
-=======
-<<<<<<< HEAD
-      
-=======
-  
->>>>>>> refs/remotes/origin/main
-=======
->>>>>>> refs/remotes/origin/kazungu
-    }
->>>>>>> refs/remotes/origin/kazungu
   ]
+
 }

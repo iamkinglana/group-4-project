@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from "react";
-
+import React, { useState, useEffect } from 'react';
 function CarList() {
   const [cars, setCars] = useState([]);
-
   useEffect(() => {
     fetch("http://localhost:3006/cars")
       .then((response) => response.json())
       .then((data) => setCars(data))
       .catch((error) => console.error(error));
   }, []);
-
-
-
   const handleCardClick = (id) => {
     const index = cars.findIndex((cars) => cars.id === id);
     const clickedCar = cars[index];
@@ -21,8 +16,7 @@ function CarList() {
       clickedCar
     ];
     setCars(updatedCars);
-  };
-
+  }
   return (
     <div className="car-collection">
       <h2>Car Collection</h2>
@@ -43,7 +37,7 @@ function CarList() {
               </h3>
               <p id="catchphrase">{cars.Engine}</p>
               <p>
-                {cars.Origin} {cars.top} 
+                {cars.Origin} {cars.top}
                 {cars.price}
               </p>
             </div>
@@ -53,5 +47,4 @@ function CarList() {
     </div>
   );
 }
-
 export default CarList;
