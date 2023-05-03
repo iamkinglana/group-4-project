@@ -1,19 +1,16 @@
 import React from 'react';
 
-function Card({ make, model, year, price, image }) {
+function Card(props) {
+  const { make, model, year, price, image} = props;
+
   return (
     <div className="card">
-      <div className="card-image">
-        <img src={image} alt={`${make} ${model}`} />
-      </div>
-      <div className="card-content">
-        <div className="card-header">
-          <h3 className="card-title">{`${make} ${model}`}</h3>
-          <div className="card-subtitle">{year}</div>
-        </div>
-        <div className="card-details">
-          <div className="card-price">{`$${price}`}</div>
-        </div>
+      <img src={image} alt={`${make} ${model}`} />
+      <div className="details">
+        <h3>{make} {model}</h3>
+        <p>Year: {year}</p>
+        <p>Price: {price}</p>
+        
       </div>
     </div>
   );
