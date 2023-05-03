@@ -2,50 +2,75 @@ import React, { useState, useEffect } from "react";
 
 function CarList() {
   const [cars, setCars] = useState([]);
+  const [filteredCars, setFilteredCars] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:3006/cars")
       .then((response) => response.json())
-      .then((data) => setCars(data))
+      .then((data) => {
+        setCars(data);
+        setFilteredCars(data);
+      })
       .catch((error) => console.error(error));
   }, []);
 
-
-
   const handleCardClick = (id) => {
-    const index = cars.findIndex((cars) => cars.id === id);
-    const clickedCar = cars[index];
-    const updatedCars = [
-      ...cars.slice(0, index),
-      ...cars.slice(index + 1),
-      clickedCar
-    ];
-    setCars(updatedCars);
+    const clickedCar = cars.find((car) => car.id === id);
+    const updatedCars = cars.filter((car) => car.id !== id);
+    setCars([...updatedCars, clickedCar]);
+    setFilteredCars([...updatedCars, clickedCar]);
+  };
+
+  const handleDelete = (id) => {
+    fetch(`http://localhost:3006/cars/${id}` , {
+        method : 'DELETE',
+        headers : {'Content-Type' : 'application/json'}
+    })
+    setCars(cars.filter((car) => car.id !== id));
+    setFilteredCars(filteredCars.filter((car) => car.id !== id));
+  };
+
+  const filterCars = (e) => {
+    const keyword = e.target.value;
+    const filtered = cars.filter((car) => {
+      return (
+        car.Make.toLowerCase().includes(keyword.toLowerCase()) ||
+        car.Model.toLowerCase().includes(keyword.toLowerCase())
+      );
+    });
+    setFilteredCars(filtered);
   };
 
   return (
     <div className="car-collection">
       <h2>Car Collection</h2>
+      <div className="search-box">
+        <input
+          type="text"
+          placeholder="Search by Make or Model"
+          onChange={filterCars}
+        />
+      </div>
       <div className="card-list">
-        {cars.map((cars) => (
+        {filteredCars.map((car) => (
           <div
             className="card"
-            key={cars.id}
-            onClick={() => handleCardClick(cars.id)}
+            key={car.id}
+            onClick={() => handleCardClick(car.id)}
           >
             <div className="card-image">
-              <img src={cars.Image-1} alt={cars.Make} />
-              <img src={cars.Image-2} alt={cars.Make} />
+              <img src={car.Image_1} alt={car.Make} />
+              <img src={car.Image_2} alt={car.Make} />
             </div>
             <div className="card-content">
               <h3>
-                {cars.Make} {cars.Model}
+                {car.Make} {car.Model}
               </h3>
-              <p id="catchphrase">{cars.Engine}</p>
+              <p id="catchphrase">{car.Engine}</p>
               <p>
-                {cars.Origin} {cars.top} 
-                {cars.price}
+                {car.Origin} {car.top} {car.price}
               </p>
+              <button onClick={() => handleDelete(car.id)}>Delete</button>
             </div>
           </div>
         ))}
