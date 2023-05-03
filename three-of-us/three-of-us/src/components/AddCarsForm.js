@@ -26,7 +26,7 @@ function AddCarsForm({ handleAddCars }) {
 			const jsonRes = await res.json();
 			handleAddCars(jsonRes);
 			setFormData({
-				date: "",
+			
 				description: "",
 				category: "",
 				amount: null,
@@ -42,12 +42,7 @@ function AddCarsForm({ handleAddCars }) {
 		<div className="ui segment">
 			<form className="ui form" onSubmit={handlePostCars}>
 				<div className="inline fields">
-					<input
-						type="date"
-						name="date"
-						value={formData.date}
-						onChange={handleChange}
-					/>
+					
 					<input
 						type="text"
 						value={formData.description}
