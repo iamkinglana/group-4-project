@@ -1,5 +1,5 @@
 {
-  "cars": [
+  "cars": 
     {
       "Id": "1",
       "Make": "MERDCEDES-BENZ",
@@ -17,19 +17,19 @@
       "Image 2": "https://cdn.motor1.com/images/mgl/4gvlM/s1/1995-lotec-c1000.jpg"
     },
     {
-      "id": "2",
-      "make": "NISSAN",
-      "model": "R390 GT1",
-      "debuted": "1997 and 1998",
-      "engine": "VRH35L twin-turbocharged 3.5-litre double-overhead-camshaft V8 engine",
-      "acceleration": " 0–60 mph (0–97 km/h) in 3.2 seconds",
-      "top speed": "354 km/h",
-      "horse power": "650hp",
-      "fuel type": "Petrol",
-      "price": "$1.0 million (USD)",
-      "origin": "Atsugi, JAPAN",
+      "Id": "2",
+      "Make": "NISSAN",
+      "Model": "R390 GT1",
+      "Debuted": "1997 and 1998",
+      "Engine": "VRH35L twin-turbocharged 3.5-litre double-overhead-camshaft V8 engine",
+      "Acceleration": " 0–60 mph (0–97 km/h) in 3.2 seconds",
+      "Top Speed": "354 km/h",
+      "Horse Power": "650hp",
+      "Fuel Type": "Petrol",
+      "Price": "$1.0 million (USD)",
+      "Origin": "Atsugi, JAPAN",
       "Units Produced": "8",
-      "image 1": "https://cdn.motor1.com/images/mgl/RoMrw/s1/1998-nissan-r390-gt1-road-car-concept.jpg",
+      "Image 1": "https://cdn.motor1.com/images/mgl/RoMrw/s1/1998-nissan-r390-gt1-road-car-concept.jpg",
       "image 2": "https://cdn.motor1.com/images/mgl/8JZ63/s1/1998-nissan-r390-gt1-road-car-concept.jpg"
     },
     {
@@ -272,5 +272,4 @@
       "Image 1": "https://wallpaperaccess.com/full/8773696.jpg",
       "Image 2": "https://www.motortrend.com/uploads/sites/5/2021/05/P90423781_highRes_rolls-royce-boat-tai.jpg"
     }
-  ]
-}
+  }
