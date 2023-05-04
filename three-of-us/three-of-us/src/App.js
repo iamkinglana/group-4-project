@@ -50,6 +50,7 @@ function App() {
     <div className="ui raised segment">
       <div className="ui segment violet inverted">
         <h2>Three - Of - US</h2>
+
       </div>
       <Router>
         <Navbar />
