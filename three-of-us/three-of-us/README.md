@@ -1,73 +1,68 @@
-# Getting Started with Create React App
+# group-4-project
+# CONCOURS d'ELEGANCE 2023
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React application that allows users to view, search, add and delete classic cars from a database. The application uses React Router for navigation and fetching data from a RESTful API.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To get started with this application, clone the repository from GitHub and install the necessary dependencies:
 
-### `npm start`
+```
+git clone https://github.com/yourusername/yourproject.git
+cd yourproject
+npm install
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+You will also need to start the server for the RESTful API. To do so, navigate to the `server` directory and run:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+cd server
+npm start
+```
 
-### `npm test`
+This will start the server on `http://localhost:3006`.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To start the React application, navigate back to the project root directory and run:
 
-### `npm run build`
+```
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This will start the application on `http://localhost:3000`.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Cars Container
 
-### `npm run eject`
+The `CarsContainer` component is the main component of the application and renders the `CarSearch`, `CarList`, and `SearchCars` components. It also handles the state for the list of cars, which is passed down to child components as props.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Car Search
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The `CarSearch` component allows users to search for cars by entering a search term. When the user submits the search form, the `handleSearch` function is called, which fetches cars from the API that match the search term and updates the state of the list of cars.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Car List
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The `CarList` component displays a list of cars that are passed down as props from the parent `CarsContainer` component. Each car is displayed as a `Card` component, which includes an image, title, and description.
 
-## Learn More
+### Search Cars
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The `SearchCars` component allows users to filter the list of cars based on various criteria, such as make, model, and year. When the user selects a filter, the `handleSearch` function is called, which fetches cars from the API that match the selected criteria and updates the state of the list of cars.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Adding Cars
 
-### Code Splitting
+The `handleAddCars` function in the `App` component allows users to add a new car to the list of cars. When the user submits the add car form, the new car is added to the list of cars and the state is updated.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Deleting Cars
 
-### Analyzing the Bundle Size
+The `handleDeleteCars` function in the `App` component allows users to delete a car from the list of cars. When the user clicks the delete button for a car, the `handleDeleteCars` function is called, which removes the car from the list of cars and updates the state.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Technologies Used
 
-### Making a Progressive Web App
+- React
+- React Router
+- CSS
+- JavaScript
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Contributing
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-
-First Commit
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
