@@ -7,6 +7,8 @@ import Navbar from "./components/NavBar";
 import SearchCars from "./components/SearchCars";
 import Card from "./components/Card";
 
+
+
 function App() {
   const [cars, setCars] = useState([]);
 
@@ -49,9 +51,12 @@ function App() {
   return (
     <div className="ui raised segment">
       <div className="ui segment violet inverted">
+        
       <h1> CONCOURS D'ELEGANCE 2023 </h1>
 
+
       </div>
+      
       <Router>
         <Navbar />
         <Routes>

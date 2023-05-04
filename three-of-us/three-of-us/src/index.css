@@ -11,7 +11,73 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0e0e0e;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 80px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+nav a {
+  color: #00ffff;
+  text-decoration: none;
+  margin-right: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+nav a:hover {
+  color: #ddb916;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+nav li {
+  margin-left: 20px;
+}
+nav li:last-child {
+  margin-right: 0;
+}
+nav button {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+nav button:hover {
+  background-color: #333;
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+  }
+  nav ul {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+  nav li {
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  nav li:last-child {
+    margin-bottom: 0;
+  }
+}
 
 .card {
   padding: 2em;
@@ -20,7 +86,7 @@ code {
   color: #888;
 }
 .car-collection {
-  padding: 20px;
+  padding: 70px;
 }
 .card-list {
   display: flex;
@@ -28,8 +94,8 @@ code {
   justify-content: space-between;
 }
 .card {
-  background-color: rgb(63, 66, 58);
-  border: 1px solid #ccc;
+  background-color: rgb(15, 129, 129);
+  border: 5px solid #000000;
   border-radius: 3px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
@@ -65,6 +131,11 @@ code {
 .slider-container {
   max-width: 700px;
   margin: 0 auto;
-  overflow: ;
   overflow-wrap: normal;
+}
+body {
+  background-image: url('../src/Assets/191104152639-14-lamborghini-special.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* any other styling you want to apply */
 }
