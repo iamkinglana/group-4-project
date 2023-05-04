@@ -47,7 +47,7 @@ function App() {
   return (
     <div className="ui raised segment">
       <div className="ui segment violet inverted">
-        <h2> Three - Of - US </h2>{" "}
+        <h1> Three - Of - Us </h1>{" "}
       </div>
 	  <Navbar/>
 	  
