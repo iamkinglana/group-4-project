@@ -6,8 +6,7 @@ import CarSearch from "./components/CarSearch";
 import Navbar from "./components/NavBar";
 import SearchCars from "./components/SearchCars";
 import Card from "./components/Card";
-
-
+import "./App.css"; // Import your CSS file
 
 function App() {
   const [cars, setCars] = useState([]);
@@ -45,18 +44,13 @@ function App() {
   const handleDeleteCars = (carId) => {
     const filteredCars = cars.filter((car) => car.id !== carId);
     setCars(filteredCars);
-
   };
 
   return (
-    <div className="ui raised segment">
-      <div className="ui segment violet inverted">
-        
-      <h1> CONCOURS D'ELEGANCE 2023 </h1>
-
-
+    <div className="app-container">
+      <div className="header">
+        <h1> CONCOURS D'ELEGANCE 2023 </h1>
       </div>
-      
       <Router>
         <Navbar />
         <Routes>
@@ -75,14 +69,11 @@ function App() {
             path="/carsearch"
             element={<CarSearch handleSearch={handleSearch} />}
           />
-          
           <Route path="/carlist" element={<CarList cars={cars} />} />
-          
           <Route path="/searchcars" element={<SearchCars />} />
         </Routes>
       </Router>
     </div>
-
   );
 }
 

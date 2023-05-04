@@ -129,13 +129,295 @@ nav button:hover {
   z-index: 1;
 }
 .slider-container {
-  max-width: 700px;
-  margin: 0 auto;
-  overflow-wrap: normal;
+  width: 24rem;
+  height: 36rem;
+  border-radius: 10px;
+  overflow:hidden;
+  cursor: pointer;
+
 }
+
 body {
   background-image: url('../src/Assets/191104152639-14-lamborghini-special.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   /* any other styling you want to apply */
+}
+/* Define styles for the slider container */
+.slider-container {
+  margin: 20 auto;
+  max-width: 800px;
+}
+
+/* Define styles for the slider dots */
+.slick-dots {
+  bottom: 50px;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+  color: white;
+  opacity: 0.7;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+/* Define styles for the slide images */
+.slick-slide img {
+  width: 100%;
+  height: auto;
+}
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* .header {
+  background-color: violet;
+  color: white;
+  padding: 20px;
+  text-align: center;
+} */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  margin-right: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.navbar a:hover {
+  color: violet;
+}
+
+.card {
+  background-color: #f2f2f2;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px
+}
+
+.car-collection {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.search-box {
+  margin-bottom: 20px;
+}
+
+.search-box input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  position: relative;
+  overflow:hidden;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  display: grid;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card .card-image {
+  position: relative;
+  height: 200px;
+  overflow:auto;
+  width: 100%;
+  
+}
+
+.card .card-image img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: all 0.2s ease-in-out;
+}
+
+.card:hover .card-image img:first-child {
+  transform: scale(1.1);
+}
+
+.card:hover .card-image img:last-child {
+  transform: scale(1.2);
+}
+
+.card .card-content {
+  padding: 20px;
+}
+
+.card .card-content h3 {
+  margin-top: 0;
+}
+
+.card .card-content p {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.card .card-content button {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #e74c3c;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.card .card-content button:hover {
+  background-color: #c0392b;
+}
+.ui.segment {
+  border: 1px solid #d4d4d5;
+  border-radius: 0.28571429rem;
+  padding: 1em;
+  
+
+}
+
+.ui.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.inline.fields {
+ 
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 1em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+.inline.fields input {
+  margin-right: 1em;
+}
+
+.ui.button {
+  background-color: #2185d0;
+  color: #fff;
+  border: none;
+  border-radius: 0.28571429rem;
+  padding: 0.78571429em 1.5em;
+  margin-top: 1em;
+}
+
+.ui.button:hover {
+  background-color: #1678c2;
+}
+/* Car search */
+.car-search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  width: 300px;
+  max-width: 100%;
+}
+
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  background-color: #0077cc;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005ea6;
+}
+
+.car-search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.car-search-results li {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+  max-width: 300px;
+  flex-basis: 300px;
+  text-align: center;
+}
+
+.car-search-results li p {
+  margin: 0;
+  font-size: 17px;
+  color: #c0392b;
 }

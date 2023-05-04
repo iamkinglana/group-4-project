@@ -57,12 +57,12 @@
 }
 
 .card {
-  background-color: greenyellow;
+  background-color: rgb(208, 249, 41);
   border: 1px solid #ccc;
   border-radius: 3px;
   box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
-  width: calc(20.33% - 10px);
+  width: calc(20.33% - 5px);
   height:auto;
   overflow-wrap: normal;
 }
