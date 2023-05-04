@@ -1,4 +1,5 @@
 import React from "react";
+import ImageSlider from "./SliderContainer";
 
 function AddCarsForm({ handleAddCars }) {
 	const [formData, setFormData] = React.useState({
@@ -42,7 +43,7 @@ function AddCarsForm({ handleAddCars }) {
 		<div className="ui segment">
 			<form className="ui form" onSubmit={handlePostCars}>
 				<div className="inline fields">
-					
+				 <ImageSlider/>
 					<input
 						type="text"
 						value={formData.description}
