@@ -43,7 +43,7 @@ function CarList() {
 
   return (
     <div className="car-collection">
-      <h2>Car Collection</h2>
+      <h2>CAR COLLECTION</h2>
       <div className="search-box">
         <input
           type="text"
