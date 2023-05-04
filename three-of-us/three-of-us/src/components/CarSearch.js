@@ -27,14 +27,15 @@ function CarSearch() {
   };
 
   return (
-    <div>
+    <div className="car-search-container">
       <input type="text" onChange={handleInputChange} />
       <button onClick={handleSearch}>Search</button>
       {searchResults.length > 0 && (
-        <ul>
+        <ul className="car-search-results">
           {searchResults.map((car) => (
             <li key={car.id}>
-              {car.make} {car.model} ({car.year})<p>Name: {car.name}</p>
+              {car.make} {car.model} ({car.year})
+              <p>Name: {car.name}</p>
               <p>Make: {car.make}</p>
               <p>Year: {car.year}</p>
               <p>Fuel Type: {car.fuel_type}</p>
@@ -44,8 +45,7 @@ function CarSearch() {
       )}
     </div>
   );
-  
-
 }
 
 export default CarSearch;
+

@@ -22,10 +22,10 @@ function CarList() {
   };
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:3006/cars/${id}` , {
-        method : 'DELETE',
-        headers : {'Content-Type' : 'application/json'}
-    })
+    fetch(`http://localhost:3006/cars/${id}`, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" }
+    });
     setCars(cars.filter((car) => car.id !== id));
     setFilteredCars(filteredCars.filter((car) => car.id !== id));
   };
@@ -43,7 +43,7 @@ function CarList() {
 
   return (
     <div className="car-collection">
-      <h2>CAR COLLECTION</h2>
+        <h2>CAR COLLECTION</h2>
       <div className="search-box">
         <input
           type="text"
@@ -72,7 +72,7 @@ function CarList() {
               </p>
               <button onClick={() => handleDelete(car.id)}>Delete</button>
             </div>
-          </div>
+          </div >
         ))}
       </div>
     </div>
